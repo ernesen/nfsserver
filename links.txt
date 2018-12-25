@@ -1,0 +1,4 @@
+# SettingUpNFSHowTo
+# https://help.ubuntu.com/community/SettingUpNFSHowTo
+
+https://stackoverflow.com/questions/45938202/mount-nfs-connection-timed-out-on-ubuntu-14-04-1-lts
