@@ -3,7 +3,8 @@
 
 BOX="ubuntu/xenial64"
 HOSTNAME="nfs-server"
-IP="192.168.99.103"
+#IP="192.168.99.103"
+IP="172.42.42.103"
 BOOTSTRAP="bootstrap.sh"
 SHAREDDIR="/vagrant"
 
@@ -72,8 +73,8 @@ Vagrant.configure("2") do |config|
   # information on available options.
   config.vm.provider "virtualbox" do |v|
     v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
-    v.memory = 4096
-    v.cpus = 2
+    v.memory = 1024
+    v.cpus = 1
     v.name = "#{HOSTNAME}"
   end
   # Define a Vagrant Push strategy for pushing to Atlas. Other push strategies
