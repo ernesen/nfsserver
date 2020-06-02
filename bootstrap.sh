@@ -42,7 +42,9 @@ sudo exportfs -arvf
 sudo mount --bind /var/jenkins_home /var/jenkins_home
 sudo echo "/var/jenkins_home    /var/jenkins_home   none    bind  0  0" >> /etc/fstab
 
-sudo mount 192.168.99.103:/var/jenkins_home /var/jenkins_home
+IP="172.42.42.103"
+#sudo mount 192.168.99.103:/var/jenkins_home /var/jenkins_home
+sudo mount ${IP}:/var/jenkins_home /var/jenkins_home
 # end
 
 sudo systemctl start nfs-kernel-server
