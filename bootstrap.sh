@@ -55,12 +55,12 @@ sudo systemctl status nfs-kernel-server
 
 # added on 02-06-2020 (2nd June 2020)
 # Enable ssh password authentication
-echo "[TASK 11] Enable ssh password authentication"
-sed -i 's/^PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config
-systemctl reload sshd
+sudo echo "[TASK 11] Enable ssh password authentication"
+sudo sed -i 's/^PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config
+sudo systemctl reload sshd
 
 # Set Root password
-echo "[TASK 12] Set root password"
-echo "kubeadmin" | passwd --stdin root >/dev/null 2>&1
+sudo echo "[TASK 12] Set root password"
+sudo echo "kubeadmin" | passwd --stdin root >/dev/null 2>&1
 
 # Update vagrant user's bashrc file
